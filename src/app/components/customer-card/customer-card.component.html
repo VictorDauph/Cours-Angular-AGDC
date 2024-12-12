@@ -1,0 +1,7 @@
+<article *ngIf="customer.age>=26" [class.young-customer]="customer.age < 30"
+    [class.regular-customer]="customer.age >= 30">
+    <h3>{{customer.nom}}</h3>
+    <h4>{{customer.age}}</h4>
+    <p>{{customer.address}}</p>
+    <a [routerLink]="['/customer', customer.id]">Lien To customer page</a>
+</article>

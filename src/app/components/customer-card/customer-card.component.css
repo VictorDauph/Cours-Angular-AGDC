@@ -1,0 +1,13 @@
+/* Classe pour les jeunes clients */
+.young-customer {
+    border: 2px solid green;
+    background-color: #eaffea;
+    /* Fond vert clair */
+}
+
+/* Classe pour les clients réguliers */
+.regular-customer {
+    border: 2px solid blue;
+    background-color: #eaf4ff;
+    /* Fond bleu clair */
+}

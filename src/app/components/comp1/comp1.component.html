@@ -1,0 +1,16 @@
+<p>comp1 works!</p>
+<p><a routerLink="customers">{{text}}</a></p>
+<button (click)="logText('fromHTML : '+text)">Afficher le texte dans la console</button>
+<button (click)="greet('wesh')">greet</button>
+
+<div [class.highlight]="isHighlighted" (click)="toggleIsHighLighted()">
+    Je suis un conteneur avec des classes dynamiques.
+</div>
+
+
+<app-comp2 [message]="greet('Alice')" [customer]="customers[0]" (close)="handleClose($event)">
+</app-comp2>
+
+
+<input [(ngModel)]="username" />
+<p>Nom : {{ username }}</p>

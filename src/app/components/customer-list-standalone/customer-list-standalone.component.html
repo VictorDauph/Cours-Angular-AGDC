@@ -1,0 +1,10 @@
+<p>customer-list-standalone works!</p>
+<p appHighlight>Survolez-moi pour voir l'effet</p>
+
+<div *ngFor="let customer of customerList">{{customer.nom}}</div>
+
+<main class="customer-list">
+    <app-customer-card *ngFor="let customer of customerList" [customer]="customer">
+    </app-customer-card>
+</main>
+<app-customer-form-reactive></app-customer-form-reactive>

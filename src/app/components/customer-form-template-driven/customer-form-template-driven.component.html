@@ -1,0 +1,44 @@
+<form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm)">
+    <!-- ID -->
+    <div>
+        <label for="id">ID</label>
+        <input type="number" id="id" name="id" ngModel required />
+        <div *ngIf="customerForm.controls['id']?.invalid && customerForm.controls['id']?.touched">
+            ID est requis.
+        </div>
+    </div>
+
+    <!-- Nom -->
+    <div>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" ngModel required minlength="3" />
+        <div *ngIf="customerForm.controls['nom']?.invalid && customerForm.controls['nom']?.touched">
+            <p *ngIf="customerForm.controls['nom']?.errors?.['required']">Le nom est requis.</p>
+            <p *ngIf="customerForm.controls['nom']?.errors?.['minlength']">
+                Le nom doit contenir au moins 3 caractères.
+            </p>
+        </div>
+    </div>
+
+    <!-- Adresse -->
+    <div>
+        <label for="address">Adresse</label>
+        <input type="text" id="address" name="address" ngModel required />
+        <div *ngIf="customerForm.controls['address']?.invalid && customerForm.controls['address']?.touched">
+            Adresse est requise.
+        </div>
+    </div>
+
+    <!-- Âge -->
+    <div>
+        <label for="age">Âge</label>
+        <input type="number" id="age" name="age" ngModel required min="18" />
+        <div *ngIf="customerForm.controls['age']?.invalid && customerForm.controls['age']?.touched">
+            <p *ngIf="customerForm.controls['age']?.errors?.['required']">L'âge est requis.</p>
+            <p *ngIf="customerForm.controls['age']?.errors?.['min']">L'âge doit être supérieur ou égal à 18.</p>
+        </div>
+    </div>
+
+    <!-- Bouton de soumission -->
+    <button type="submit" [disabled]="customerForm.invalid">Créer un Client</button>
+</form>

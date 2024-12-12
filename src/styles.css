@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+.closed {
+    display: none;
+}
+
+.highlight {
+    background-color: red;
+}
+
+/* Styles globaux pour les cartes */
+.customer-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Espacement entre les cartes */
+    justify-content: center;
+    /* Centrer les cartes */
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 1200px;
+    /* Largeur maximale pour la liste */
+}
+
+/* Style de chaque carte */
+article {
+    background-color: #f9f9f9;
+    /* Fond clair */
+    border: 1px solid #ddd;
+    /* Bordure légère */
+    border-radius: 8px;
+    /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Ombre douce */
+    padding: 15px;
+    width: 250px;
+    /* Largeur fixe pour toutes les cartes */
+    text-align: center;
+    /* Centrer le contenu */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Effets de survol */
+}
+
+/* Style du titre et des sous-titres */
+article h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+article h4 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+article p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Effets au survol */
+article:hover {
+    transform: translateY(-5px);
+    /* Légère élévation */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    /* Ombre renforcée */
+}
