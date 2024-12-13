@@ -8,6 +8,7 @@ import { CustomerFormReactiveComponent } from './components/customer-form-reacti
 import { CustomerProfileComponent } from './components/customer-profile/customer-profile.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HttpClientComponent } from './components/http-client/http-client.component';
+import { ExemplePipesComponent } from './components/exemple-pipes/exemple-pipes.component';
 
 
 export const routes: Routes = [
@@ -34,6 +35,10 @@ export const routes: Routes = [
     {
         path: 'about', // Chemin pour la page "About"
         component: AboutComponent
+    },
+    {
+        path: 'pipes', // Chemin pour la page "About"
+        component: ExemplePipesComponent
     },
     {
         path: 'customersModule',
